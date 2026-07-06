@@ -1,15 +1,16 @@
-## Database connection
-Create a databse connection and then create cursor object to execute SQL commmands
-"""Create Tables And Insert Data"""
-Creates a table if it does not exist and then create a delete command to clear the table before inserting new data, afterwwards is when data is inserted. Commit the changes to the database by conn.commit()
+## Database Connection
+Create a database connection, then create a cursor object to execute SQL commands.
 
-## Linting By pandas As For Now
-Read the data from the database into a pandas DataFrame and then select only the columns we want to keep. The df = df[columns] filters the DataFrame to include only the selected columns and then close the data base connection
+## Create Table and Insert Data
+Create the table if it doesn't already exist, then run a DELETE command to clear out old data before inserting new rows — this keeps the script idempotent, so running it multiple times won't create duplicates. Finally, commit the changes with `conn.commit()`.
+
+## View Data with pandas
+Read the data from the database into a pandas DataFrame, then filter it down to only the columns you want using `df = df[columns]`. Close the database connection once you're done.
 
 ## How to Run
-Execute this command to view the query result
+Run the following command to execute the script and view the results:
 
-python3 main.py 
-
-
+```bash
+python3 main.py
+```
 
