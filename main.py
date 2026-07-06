@@ -7,7 +7,7 @@ cur = conn.cursor()
 
 cur.execute("""
 CREATE TABLE IF NOT EXISTS tasks (
-    id INTEGER PRIMARY KEY UNIQUE,   
+    id INTEGER PRIMARY KEY AUTOINCREMENT,   
     title TEXT NOT NULL,
     description TEXT,
     completed BOOLEAN NOT NULL DEFAULT 0,

@@ -14,3 +14,9 @@ Run the following command to execute the script and view the results:
 python3 main.py
 ```
 
+## Known Issue: ID Numbers Keep Climbing
+
+
+Even though `DELETE FROM tasks` clears all rows before reinserting, the `id`
+column keeps counting up (e.g. 121, 122, 123...) instead of restarting at 1
+each time you run the script.
